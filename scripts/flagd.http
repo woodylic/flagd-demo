@@ -1,0 +1,32 @@
+###
+POST http://localhost:8013/flagd.evaluation.v1.Service/ResolveBoolean
+Content-Type: application/json
+
+{
+  "flagKey":"show-welcome-banner",
+  "context":{}
+}
+
+
+###
+POST http://localhost:8013/flagd.evaluation.v1.Service/ResolveString
+Content-Type: application/json
+
+{
+  "flagKey":"background-color",
+  "context":{
+    "company": "initech"
+  }
+}
+
+###
+###
+POST http://localhost:8013/flagd.evaluation.v1.Service/ResolveString
+Content-Type: application/json
+
+{
+  "flagKey":"background-color",
+  "context":{
+    "company": "yet another company"
+  }
+}

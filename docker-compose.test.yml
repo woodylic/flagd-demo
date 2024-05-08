@@ -1,0 +1,10 @@
+services:
+
+  flagd:
+    image: ghcr.io/open-feature/flagd:latest
+    command: start --uri file:/etc/flagd/flags.json
+    volumes:
+      - ./docker/flagd:/etc/flagd
+    ports:
+      - "8013:8013"
+      - "8015:8015"
